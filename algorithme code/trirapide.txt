@@ -1,0 +1,47 @@
+Déclaration de la fonction échanger(a, b)
+    temp = a
+    a = b
+    b = temp
+Fin Fonction
+
+Déclaration de la fonction partition(arr, bas, haut)
+    pivot = arr[haut]
+    i = bas - 1
+
+    Pour j allant de bas à haut - 1 faire
+        Si arr[j] < pivot alors
+            i = i + 1
+            Échanger arr[i] avec arr[j]
+        Fin Si
+    Fin Pour
+    Échanger arr[i + 1] avec arr[haut]
+    Retourner (i + 1)
+Fin Fonction
+
+Déclaration de la fonction triRapide(arr, bas, haut)
+    Si bas < haut alors
+        pi = partition(arr, bas, haut)
+
+        triRapide(arr, bas, pi - 1)
+        triRapide(arr, pi + 1, haut)
+    Fin Si
+Fin Fonction
+
+Début
+    Déclaration d'un vecteur arr contenant {10, 7, 8, 9, 1, 5}
+    n = taille de arr
+    
+    Afficher "Tableau avant le tri :"
+    Pour chaque élément x dans arr faire
+        Afficher x suivi d'un espace
+    Fin Pour
+    Afficher une nouvelle ligne
+    
+    Appeler la fonction triRapide avec arr, 0 et n - 1 comme paramètres
+    
+    Afficher "Tableau après le tri :"
+    Pour chaque élément x dans arr faire
+        Afficher x suivi d'un espace
+    Fin Pour
+    Afficher une nouvelle ligne
+Fin

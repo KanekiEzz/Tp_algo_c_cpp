@@ -1,0 +1,48 @@
+Déclaration de la fonction triSelection(t, N)
+    Pour i allant de 0 à N - 2 faire
+        min = i
+        Pour j allant de i + 1 à N - 1 faire
+            Si t[j] < t[min] alors
+                min = j
+            Fin Si
+        Fin Pour
+        Échanger t[i] avec t[min]
+    Fin Pour
+Fin Fonction
+
+Déclaration de la fonction triBulles(arr, n)
+    Pour i allant de 0 à n - 2 faire
+        Pour j allant de 0 à n - i - 2 faire
+            Si arr[j] > arr[j + 1] alors
+                Échanger arr[j] avec arr[j + 1]
+            Fin Si
+        Fin Pour
+    Fin Pour
+Fin Fonction
+
+Début
+    Déclaration d'un tableau arr1 contenant {64, 25, 12, 22, 11}
+    n = taille de arr1
+
+    Afficher "Tableau original :"
+    Pour chaque élément x dans arr1 faire
+        Afficher x suivi d'un espace
+    Fin Pour
+    Afficher une nouvelle ligne
+
+    Appeler la fonction triSelection avec arr1 et n comme paramètres
+    Afficher "Tableau trié avec TriSelection :"
+    Pour chaque élément x dans arr1 faire
+        Afficher x suivi d'un espace
+    Fin Pour
+    Afficher une nouvelle ligne
+
+    Déclaration d'un tableau arr2 contenant {64, 25, 12, 22, 11}
+
+    Appeler la fonction triBulles avec arr2 et n comme paramètres
+    Afficher "Tableau trié avec BubbleSort :"
+    Pour chaque élément x dans arr2 faire
+        Afficher x suivi d'un espace
+    Fin Pour
+    Afficher une nouvelle ligne
+Fin

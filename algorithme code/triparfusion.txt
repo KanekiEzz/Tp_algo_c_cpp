@@ -1,0 +1,42 @@
+Déclaration de la fonction partition(arr, bas, haut)
+    pivot = arr[haut]
+    i = bas - 1
+
+    Pour j allant de bas à haut - 1 faire
+        Si arr[j] < pivot alors
+            i++
+            Échanger arr[i] avec arr[j]
+        Fin Si
+    Fin Pour
+    Échanger arr[i + 1] avec arr[haut]
+    Retourner i + 1
+Fin Fonction
+
+Déclaration de la fonction triRapide(arr, bas, haut)
+    Si bas < haut alors
+        pi = partition(arr, bas, haut)
+
+        triRapide(arr, bas, pi - 1)
+        triRapide(arr, pi + 1, haut)
+    Fin Si
+Fin Fonction
+
+Déclaration de la fonction afficherTableau(arr)
+    Pour chaque num dans arr faire
+        Afficher num suivi d'un espace
+    Fin Pour
+    Afficher une nouvelle ligne
+Fin Fonction
+
+Début
+    Déclaration d'un vecteur arr contenant {12, 7, 11, 13, 5, 6}
+    n = taille du vecteur arr
+
+    Afficher "Tableau original : "
+    Appeler la fonction afficherTableau avec arr comme paramètre
+
+    Appeler la fonction triRapide avec arr, 0 et n - 1 comme paramètres
+
+    Afficher "Tableau trié : "
+    Appeler la fonction afficherTableau avec arr comme paramètre
+Fin

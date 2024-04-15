@@ -1,0 +1,41 @@
+Déclaration de la fonction triInsertion(arr, n)
+    Pour i allant de 1 à n - 1 faire
+        key = arr[i]
+        j = i - 1
+
+        Tant que j >= 0 et arr[j] > key faire
+            arr[j + 1] = arr[j]
+            j = j - 1
+        Fin Tant que
+
+        arr[j + 1] = key
+    Fin Pour
+Fin Fonction
+
+Déclaration de la fonction afficherTableau(arr, n)
+    Pour chaque élément num dans arr faire
+        Afficher num suivi d'un espace
+    Fin Pour
+    Afficher une nouvelle ligne
+Fin Fonction
+
+Déclaration de la fonction longueurTableau(arr)
+    Initialiser i à 0
+    Tant que arr[i] n'est pas égal à '\0' faire
+        Incrémenter i de 1
+    Fin Tant que
+    Retourner i
+Fin Fonction
+
+Début
+    Déclaration d'un tableau arr contenant {12, 11, 13, 5, 6}
+    n = longueurTableau(arr)
+
+    Afficher "Tableau avant tri : "
+    Appeler la fonction afficherTableau avec arr et n comme paramètres
+
+    Appeler la fonction triInsertion avec arr et n comme paramètres
+
+    Afficher "Tableau après tri : "
+    Appeler la fonction afficherTableau avec arr et n comme paramètres
+Fin

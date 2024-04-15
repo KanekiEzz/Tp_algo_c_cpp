@@ -1,0 +1,38 @@
+Déclaration de la fonction triBulle(str, n)
+    Pour i allant de 0 à n - 1 faire
+        Pour j allant de 0 à n - i - 1 faire
+            Si str[j] > str[j + 1] alors
+                Échanger str[j] avec str[j + 1]
+            Fin Si
+        Fin Pour
+    Fin Pour
+Fin Fonction
+
+Déclaration de la fonction afficherTableau(str, n)
+    Pour i allant de 0 à n - 1 faire
+        Afficher str[i]
+        Afficher " "
+    Fin Pour
+    Afficher une nouvelle ligne
+Fin Fonction
+
+Déclaration de la fonction longueurTableau(str)
+    Initialiser i à 0
+    Tant que str[i] n'est pas égal à '\0' faire
+        Incrémenter i de 1
+    Fin Tant que
+    Retourner i
+Fin Fonction
+
+Début
+    Déclaration d'un tableau str contenant {64, 34, 25, 12, 22, 11, 90}
+    Déclaration d'un entier n initialisé à la longueur du tableau str
+
+    Afficher "Tableau avant tri : "
+    Appeler la fonction afficherTableau avec les paramètres str et n
+
+    Appeler la fonction triBulle avec les paramètres str et n
+
+    Afficher "Tableau après tri : "
+    Appeler la fonction afficherTableau avec les paramètres str et n
+Fin
